@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "waifetch"
+version = "1.0.0"
+description = "Display anime girls holding programming books in your terminal uWu"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "waifetch", email = "waifetch@example.com"}
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Multimedia :: Graphics :: Viewers",
+    "Topic :: Terminals",
+    "Topic :: Utilities",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "requests>=2.31.0",
+    "click>=8.1.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/ashish0kumar/waifetch"
+Repository = "https://github.com/ashish0kumar/waifetch"
+Issues = "https://github.com/ashish0kumar/waifetch/issues"
+
+[project.scripts]
+waifetch = "waifetch:main"
+
+[tool.setuptools]
+py-modules = ["waifetch"]
