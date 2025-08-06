@@ -1,0 +1,72 @@
+# .github/workflows/release.yml
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.8'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install build twine
+          pip install -r requirements.txt
+
+      - name: Run tests (if any)
+        run: |
+          # Test basic functionality
+          python -c "import waifetch; print('Import successful')"
+          python waifetch.py --version
+
+      - name: Build package
+        run: python -m build
+
+      - name: Publish to PyPI
+        if: startsWith(github.ref, 'refs/tags/')
+        env:
+          TWINE_USERNAME: __token__
+          TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+        run: |
+          python -m twine upload dist/*
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: dist/*
+          generate_release_notes: true
+          body: |
+            ## waifetch ${{ github.ref_name }}
+            
+            Display anime girls holding programming books in your terminal! 🎌
+            
+            ### Installation
+            ```bash
+            pip install waifetch
+            ```
+            
+            ### Usage
+            ```bash
+            waifetch fetch python
+            waifetch list
+            ```
+            
+            See the full changelog and documentation in the README.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

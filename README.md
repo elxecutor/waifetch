@@ -128,3 +128,15 @@ The application follows clean architectural patterns:
 - Comprehensive error handling with custom exception types
 - Proper resource management for temporary files
 - Modular design for easy testing and maintenance
+
+## Contributing
+
+We welcome contributions! Please read our [Contributing Guidelines](CONTRIBUTING.md) to get started.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+This Python version is based on the original [mufetch](https://github.com/ashish0kumar/mufetch) by [@ashish0kumar](https://github.com/ashish0kumar). Special thanks for the inspiration and the original implementation!
