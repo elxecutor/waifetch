@@ -2,6 +2,14 @@
 
 A CLI tool that displays anime girls holding programming books in your terminal.
 
+---
+
+## Acknowledgments
+
+This project is originally created and maintained by [ashish0kumar](https://github.com/ashish0kumar). Please visit the [original repository](https://github.com/ashish0kumar/waifetch) to show your support.
+
+---
+
 ## Features
 
 - **Dynamic terminal display** with images rendered directly in your terminal
@@ -136,7 +144,3 @@ We welcome contributions! Please read our [Contributing Guidelines](CONTRIBUTING
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-This Python version is based on the original [mufetch](https://github.com/ashish0kumar/mufetch) by [@ashish0kumar](https://github.com/ashish0kumar). Special thanks for the inspiration and the original implementation!
