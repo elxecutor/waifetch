@@ -34,7 +34,7 @@ chmod +x waifetch.py
 
 3. Run directly:
 ```bash
-python waifetch.py
+python waifetch.py fetch
 ```
 
 ### Method 2: Install as package
@@ -45,7 +45,7 @@ pip install .
 
 Then use as:
 ```bash
-waifetch
+waifetch fetch
 ```
 
 ### Required Dependencies
@@ -75,25 +75,25 @@ sudo dnf install chafa
 
 Display a random anime girl with a random programming language:
 ```bash
-python waifetch.py
+python waifetch.py fetch
 # or if installed as package:
-waifetch
+waifetch fetch
 ```
 
 ### Language-specific Display
 
 Display an anime girl holding a specific programming language book:
 ```bash
-python waifetch.py --lang Python
-python waifetch.py -l Go
-python waifetch.py --lang "C++"
+python waifetch.py fetch --lang Python
+python waifetch.py fetch -l Go
+python waifetch.py fetch --lang "C++"
 ```
 
 ### List Available Languages
 
 See all available programming languages:
 ```bash
-python waifetch.py --list
+python waifetch.py list
 ```
 
 ### Help
@@ -107,15 +107,15 @@ python waifetch.py --help
 
 ```bash
 # Random image
-python waifetch.py
+python waifetch.py fetch
 
 # List all available languages
-python waifetch.py --list
+python waifetch.py list
 
 # Specific language
-python waifetch.py --lang Go
-python waifetch.py -l Rust
-python waifetch.py --lang JavaScript
+python waifetch.py fetch --lang Go
+python waifetch.py fetch -l Rust
+python waifetch.py fetch --lang JavaScript
 ```
 
 ## Environment Variables
